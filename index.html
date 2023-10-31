@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+ <html lang="pl">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Kalkulator</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+ </head>
+ <body>
+     <div class="container mt-5">
+         <h1 class="text-center">Kalkulator</h1>
+         <form id="calculator-form" class="mt-4">
+             <div class="form-group">
+                 <label for="a">Wartość a:</label>
+                 <input type="number" class="form-control" id="a" required>
+             </div>
+             <div class="form-group">
+                 <label for="b">Wartość b:</label>
+                 <input type="number" class="form-control" id="b" required>
+             </div>
+             <div class="form-group">
+                 <label for="c">Wartość c:</label>
+                 <input type="number" class="form-control" id="c" required>
+             </div>
+             <!-- Dodaj więcej pól dla d, e, ..., z -->
+             <button type="submit" class="btn btn-primary">Oblicz</button>
+         </form>
+         <div id="result" class="mt-4"></div>
+     </div>
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+     <!-- Tutaj dodaj swój plik JavaScript -->
+ </body>
+ </html>
