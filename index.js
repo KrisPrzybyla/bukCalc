@@ -10,6 +10,7 @@ document.getElementById('addInput').addEventListener('click', function(event) {
     newLabel.textContent = `Zdarzenie #${inputCounter+1}:`;
     newLabel.htmlFor = newInput.id;
     newInput.type = 'number';
+    newInput.step = 'any';
     newInput.required = true;
     newInput.className = 'form-control';
     newInput.id = 'multiplier_' + inputCounter++;
