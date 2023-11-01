@@ -1,3 +1,5 @@
+#IDE related
+.idea
 # Logs
 logs
 *.log
