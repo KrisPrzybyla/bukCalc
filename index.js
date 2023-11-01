@@ -1,6 +1,7 @@
 
 let inputContainer = document.getElementById('inputContainer');
 let inputCounter = 1;
+let resultDiv = document.getElementById('result');
 
 document.getElementById('addInput').addEventListener('click', function() {
     let newInput = document.createElement('input');
@@ -31,6 +32,7 @@ document.getElementById('calculator-form').addEventListener('reset', function(ev
     let inputs = inputContainer.getElementsByTagName('input');
     let labels = inputContainer.getElementsByTagName('label');
     document.getElementById('result').textContent = '';
+    resultDiv.classList.add('d-none');
 });
 
 document.getElementById('calculator-form').addEventListener('submit', function(event) {
@@ -53,5 +55,7 @@ document.getElementById('calculator-form').addEventListener('submit', function(e
     let result = a / b * cProduct;
 
     // Wyświetl wynik
-    document.getElementById('result').textContent = 'Wynik: ' + result;
+    resultDiv.textContent = 'Wynik: ' + result;
+    resultDiv.classList.remove('d-none');
+    resultDiv.scrollIntoView();
 });
