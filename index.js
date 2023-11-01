@@ -3,7 +3,8 @@ let inputContainer = document.getElementById('inputContainer');
 let inputCounter = 1;
 let resultDiv = document.getElementById('result');
 
-document.getElementById('addInput').addEventListener('click', function() {
+document.getElementById('addInput').addEventListener('click', function(event) {
+    event.preventDefault();
     let newInput = document.createElement('input');
     let newLabel = document.createElement('label');
     newLabel.textContent = `Mnożnik #${inputCounter+1}:`;
@@ -11,13 +12,14 @@ document.getElementById('addInput').addEventListener('click', function() {
     newInput.type = 'number';
     newInput.required = true;
     newInput.className = 'form-control';
-    newInput.id = 'c' + inputCounter++;
-    newInput.name = 'c';
+    newInput.id = 'multiplier_' + inputCounter++;
+    newInput.name = 'multiplier';
     inputContainer.appendChild(newLabel);
     inputContainer.appendChild(newInput);
 });
 
-document.getElementById('removeInput').addEventListener('click', function() {
+document.getElementById('removeInput').addEventListener('click', function(event) {
+    event.preventDefault();
     let inputs = inputContainer.getElementsByTagName('input');
     let labels = inputContainer.getElementsByTagName('label');
     if (inputs.length > 0) {
@@ -42,19 +44,17 @@ document.getElementById('calculator-form').addEventListener('submit', function(e
     // Pobierz wartości z pól formularza
     let a = document.getElementById('a').value;
     let b = document.getElementById('b').value;
-    let cElements = document.getElementsByName('c');
+    let multiplierElements = document.getElementsByName('multiplier');
 
     // Oblicz iloczyn wszystkich wartości 'c'
-    let cProduct = 1;
-    for (let i = 0; i < cElements.length; i++) {
-        cProduct *= cElements[i].value;
+    let multiplier = 1;
+    for (let i = 0; i < multiplierElements.length; i++) {
+        multiplier *= multiplierElements[i].value;
     }
-    console.log('ilosc c',cElements.length);
 
-    // Wykonaj obliczenia
-    let result = a / b * cProduct;
+    let result = a / b * multiplier;
 
-    // Wyświetl wynik
+    // Show result
     resultDiv.textContent = 'Wynik: ' + result;
     resultDiv.classList.remove('d-none');
     resultDiv.scrollIntoView();
