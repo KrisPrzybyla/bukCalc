@@ -14,7 +14,7 @@
                  <div class="col-md-3">
                      <div class="form-group">
                          <label for="a">Wkład:</label>
-                         <input type="number" min="1" class="form-control" id="a" required>
+                         <input type="number" step="any" class="form-control" id="a" required>
                      </div>
                  </div>
                  <div class="col-md-2 d-flex align-items-center justify-content-center">
@@ -25,18 +25,18 @@
                  <div class="col-md-3">
                      <div class="form-group">
                          <label for="b">Kombinacje:</label>
-                         <input type="number" min="1" class="form-control" id="b" required>
+                         <input type="number" step="any" min="1" class="form-control" id="b" required>
                      </div>
                  </div>
              </div>
              <div class="row justify-content-center">
                  <div class="col-md-4">
-                     <label for="c0">Mnożnik #1:</label>
-                     <input type="number" min="1" class="form-control" id="c0" name="c" required>
+                     <label for="c0">Zdarzenie #1:</label>
+                     <input type="number" step="any" min="1" class="form-control" id="c0" name="c" required>
                      <div id="inputContainer"></div>
                      <div class="form-group"></div>
-                     <button id="addInput" class="btn btn-outline-primary" formnovalidate>Dodaj mnożnik</button>
-                     <button id="removeInput" class="btn btn-outline-secondary" formnovalidate>Usuń mnożnik</button>
+                     <button id="addInput" class="btn btn-outline-primary" formnovalidate>Dodaj zdarzenie</button>
+                     <button id="removeInput" class="btn btn-outline-secondary" formnovalidate>Usuń zdarzenie</button>
                      <div class="form-group"></div>
                      <button type="submit" class="btn btn-primary">Oblicz</button>
                      <button type="reset" class="btn btn-danger">Wyczyść</button>

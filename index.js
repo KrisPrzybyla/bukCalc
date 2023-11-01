@@ -7,7 +7,7 @@ document.getElementById('addInput').addEventListener('click', function(event) {
     event.preventDefault();
     let newInput = document.createElement('input');
     let newLabel = document.createElement('label');
-    newLabel.textContent = `Mnożnik #${inputCounter+1}:`;
+    newLabel.textContent = `Zdarzenie #${inputCounter+1}:`;
     newLabel.htmlFor = newInput.id;
     newInput.type = 'number';
     newInput.required = true;
